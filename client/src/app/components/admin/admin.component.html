@@ -1,0 +1,11 @@
+<div id="adminAllProducts">
+    <br>
+
+    <a>Search Product:</a><input id="searchInput" placeholder="Search here" type="text" [(ngModel)]="search">
+    
+    <app-all-products [userType]="userService.userType" [search]="search"></app-all-products>
+
+
+</div>
+
+

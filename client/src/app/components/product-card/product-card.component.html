@@ -1,0 +1,12 @@
+<div class="productCard" >
+    <div (click)="openProductModal()">    
+        <img src="{{product.picture}}">
+        <h2>{{product.name}}</h2>
+        <h5>{{product.category}}</h5>
+        <h4>{{product.price}}₪</h4>
+    </div>
+    
+
+    <button *ngIf="userType == 'CUSTOMER'" (click)="addToCart(product)">Add to cart</button>
+    <button *ngIf="userType == 'ADMIN'" (click)="openEditProductModal(product)">Edit Product</button>
+</div>

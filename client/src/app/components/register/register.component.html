@@ -1,0 +1,33 @@
+<div id="registerContainer">
+    <div id="formContainer">
+        <h1 id="registerHeader">Register</h1>
+
+        <form #registrationForm="ngForm" (submit)="next()" [formGroup]="userDetailsForm" ngNativeValidate>
+            <a><i>ID</i></a>
+            <input type="number" placeholder="ID" name="id" [formControl]="id" >
+            <span *ngIf="id.errors && !id.pristine">ID must be 8 to 9 digits</span>
+        
+            <a><i>Email</i></a>
+            <input type="email" placeholder="Email" name="Email" [formControl]="email">
+            <span *ngIf="!email.valid && !email.pristine" email>Email isn't valid</span>
+        
+        
+            <a><i>Password</i></a>
+            <input type="password" placeholder="password" name="password" maxlength="12" autocomplete="off" [formControl]="password">
+            <span *ngIf="password.errors?.minlength">Password's minimum length is 6</span>
+            <span *ngIf="!password.errors?.minlength && password.errors?.pattern">Password must contain at least 1 letter, 1 uppercase letter and at least 1 number.</span>
+
+            <a><i>Password Verification</i></a>
+            <input type="password" maxlength="12" placeholder="Password Verification" autocomplete="off" [formControl]="passwordVerification" name="passwordVerification">
+            <span *ngIf="password.value != passwordVerification.value">Password's are not identical</span>
+
+            <button type="submit" id="submitButton" [disabled]="!registrationForm.form.valid || password.value != passwordVerification.value">Next</button>
+
+            <a><i>Forgot something?</i></a>
+            <button  type="button" (click)="backToLogin()">Back</button>
+        </form>
+
+    </div>
+    
+</div>
+

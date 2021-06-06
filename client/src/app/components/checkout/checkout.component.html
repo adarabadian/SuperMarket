@@ -1,0 +1,75 @@
+<div id="checkoutComponent">
+  <h1>Checkout</h1>
+
+  <a id="searchText">Search Product:</a><input id="searchInput" placeholder="Search here" type="text"
+    [(ngModel)]="search">
+
+  <table #tableToSave>
+    <thead>
+      <tr>
+        <th>Picture</th>
+        <th>Name</th>
+        <th>Amount</th>
+        <th>Price</th>
+        <th>Total</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="card-body" *ngFor="let item of cartService.userCart| searchPipe : search | keyvalue ">
+        <td>
+          <img src={{item.value.picture}}>
+        </td>
+        <td>
+          {{item.value.name}}
+        </td>
+        <td>
+          {{item.value.amount}}
+        </td>
+        <td>
+          {{item.value.price}}₪
+        </td>
+        <td class="totalPrice">
+          {{item.value.amount*item.value.price}}₪
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <a id="totalPrice">Total Cart Price: {{calculateCart()}}₪</a>
+
+
+
+  <h1 id="deliveryHeader">Delivery Details</h1>
+
+  <form #deliveryForm="ngForm" (submit)="checkout()" [formGroup]="deliveryFormGroup" ngNativeValidate>
+    <div>
+      <a><i>City:</i></a><br>
+      <input type="text" placeholder="City" name="city" [formControl]="city"><br>
+      <span *ngIf="city.errors && !city.pristine">City must be 3 to 15 letters.</span><br>
+
+      <a><i>Street Address:</i></a><br>
+      <input type="text" placeholder="Street" name="street" [formControl]="street"><br>
+      <span *ngIf="!street.valid && !street.pristine">Please fill valid street and number.</span><br>
+    </div>
+
+    <div>
+      <a><i>Delivery Date:</i></a><br>
+      <input type="date" name="deliveryDate" min="{{this.minDate | date:'yyyy-MM-dd'}}" id="dateInput"
+        (change)="validateDate()" [formControl]="deliveryDate"><br>
+      <span *ngIf="deliveryDate.touched && !isDeliveryDateValid">Delivery Date must be in the future.</span><br>
+
+      <a><i>Credit Card:</i></a><br>
+      <input type="number" placeholder="Credit Card" name="creditCard" [formControl]="creditCard"><br>
+      <span *ngIf="creditCard.errors?.min || creditCard.errors?.max">Credit Card must be between 8 to 20
+        digits.</span><br>
+
+    </div>
+  </form>
+
+  <div id="buttonsContainer">
+    <button (click)="checkout()" type="submit" [disabled]="!deliveryForm.form.valid || isDeliveryDateValid == false">
+      <a>Check Out </a><img src="/assets/checkoutIcon.png"></button><br>
+
+    <button (click)="returnToProducts()"><a>Go Back </a><img src="/assets/backIcon.png"></button>
+  </div>
+</div>

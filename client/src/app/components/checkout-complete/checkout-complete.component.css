@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arima+Madurai&display=swap');
+
+h1{
+    font-family: 'Parisienne', cursive;
+    font-size: 600%;
+    letter-spacing: 4px;
+    color: black;
+    padding-top: 7%;
+    padding-bottom: 1.5%;
+    font-weight: bold;
+}
+
+h2{
+    vertical-align: 45%;
+    padding-top: 2%;
+    font-family: 'Arima Madurai';
+    font-weight: bolder;
+    font-size: 150%;
+}
+img{
+    height: 20vh;
+    margin: 2% auto ;
+    display: block;
+}
+
+button{
+    font-family: 'Arima Madurai';
+    font-weight: bolder;
+    font-size: 180%;
+    width: 20vw;
+    margin: 4% 5%;
+    border: 3px inset lightgray;
+    border-radius: 30px;
+}
+
+
+
+*:focus{
+    outline: none;
+}
+
+@media screen and (max-width: 1050px) {
+    #checkoutSuccessComponent{
+        margin-top: 13.7vh;
+        height: 79vh;
+    
+    }
+
+    h1{
+        padding-top: 6%;
+        padding-bottom: 3%;
+    }
+
+    button{
+        width: 60vw;
+    }
+
+    h2{
+       padding-top: 0;
+    }
+}
+@media screen and (max-width: 1000px) {
+    h1{
+        padding-top: 15%;
+        padding-bottom: 10%;
+    }
+    h2{
+        padding-bottom: 2%;
+     }
+     button{
+        margin-top: 8%;
+     }
+
+}
+
+@media screen and (max-width: 500px) {
+    img{
+        width: 80vw;
+        margin: 2% auto ;
+        display: block;
+    }
+
+    h1{
+        font-size: 300%;
+    }
+
+}

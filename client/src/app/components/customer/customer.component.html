@@ -1,0 +1,12 @@
+<div id="appCustomer">
+    <br>
+    
+    <a>Search Product: </a> <input id="searchInput" placeholder="Search here" type="text" [(ngModel)]="search">
+
+    <app-all-products [userType]="userService.userType" [search]="search"></app-all-products>
+
+    <div id="firstOrderNotification" *ngIf="isFirstOrder">
+        <h1>Welcome to your first order!</h1>
+        <button (click)="closeFirstOrderModal()">Thank you</button>
+    </div>
+</div>

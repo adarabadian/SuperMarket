@@ -1,0 +1,33 @@
+<div id="registerContainer">
+    <div id="formContainer">
+        <h1 id="registerHeader">Register</h1>
+
+        <form #secondRegistrationForm="ngForm" (submit)="register()" [formGroup]="userDetailsForm" ngNativeValidate>
+
+            <a><i>City</i></a>
+            <select placeholder="City" name="city" [formControl]="city">
+                <option *ngFor="let city of citys" value="{{city}}">{{city}}</option>
+            </select>
+
+            <a><i>Street</i></a>
+            <input type="text" placeholder="Street" [formControl]="street" name="street">
+            <span *ngIf="street.errors?.minlength || street.errors?.maxlength">Street must be between 4 - 20
+                letters</span>
+
+            <a><i>First Name</i></a>
+            <input type="text" placeholder="First Name" name="firstName" [formControl]="firstName">
+            <span *ngIf="firstName.errors?.minlength || firstName.errors?.maxlength || firstName.errors?.pattern">First name must be between 3 - 12
+                english letters</span>
+
+            <a><i>Last Name</i></a>
+            <input type="text" placeholder="Last Name" name="lastName" [formControl]="lastName">
+            <span *ngIf="lastName.errors?.minlength || lastName.errors?.maxlength || lastName.errors?.pattern">Last name must be between 3 - 12
+                english letters</span>
+
+            <button id="submitButton" type="submit" [disabled]="secondRegistrationForm.form.invalid">Register</button>
+
+            <a><i>Forgot something?</i></a>
+            <button type="button" (click)="previousRegister()">Back</button>
+        </form>
+    </div>
+</div>

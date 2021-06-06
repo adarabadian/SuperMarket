@@ -1,0 +1,11 @@
+<div id="allProductsDiv">
+    <!-- if chosen all categories then filter will be "", so to dispaly all products header i had to put ngIf inside the h1 -->
+    <h1 class="categoryHeader">
+        <app-categories-list (childEvent)=getFilterValue($event)></app-categories-list>
+    </h1>
+
+    <div class="cardsContainer">
+        <app-product-card *ngFor="let product of productService.allProducts |categoryPipe : filter |searchPipe : search"
+            [userType]="userType" [product]="product"></app-product-card>
+    </div>
+</div>

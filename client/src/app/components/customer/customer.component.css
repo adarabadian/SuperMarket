@@ -1,0 +1,193 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arima+Madurai&display=swap');
+
+#appCustomer{
+    max-width: -webkit-fill-available;
+    height: 89%;
+}
+
+.parent > nav{
+    display: flex;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 40px;
+    width: 98%;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    margin: auto;
+    margin-bottom: 1%;
+    border: 2px inset lightgrey;
+}
+
+.parent > nav > a{
+    display: inline-block;
+    width: 16.6%;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    font-family: 'Parisienne', cursive;
+    font-size: 190%;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    
+}
+
+#appCustomer > a{
+    display: inline-block;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    font-family: 'Parisienne', cursive;
+    font-size: 190%;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    letter-spacing: 2px;
+    word-spacing: 10px;
+}
+
+
+#appCustomer > input{
+    height: 4.5%;
+    width: 20%;
+    font-family: 'Arima Madurai', cursive;
+    font-size: 120%;
+    font-weight: bold;
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 1%;
+    background-color: #ffffff66;
+    border-radius: 31px;
+    text-align: center;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+#firstOrderNotification{
+    position: absolute;
+    background: rgba(255, 255, 255, 1);
+    width: 30%;
+    border-radius: 30px;
+    top: 35%;
+    left: 35%;
+}
+
+#firstOrderNotification >h1{  
+    font-family: 'Parisienne', cursive;
+    font-size: 300%;
+    letter-spacing: 4px;
+    margin-top: 6%;
+    color: black;
+    font-weight: bold;
+}
+
+#firstOrderNotification >button{  
+    font-family: 'Parisienne', cursive;
+    font-size: 200%;
+    color: black;
+    margin-top: 5%;
+    font-weight: bold;
+    padding: 1% 5% 1% 5%;
+    border-radius: 30px;
+    margin-bottom: 6%;
+}
+
+@media screen and (max-width: 1850px) {
+    #firstOrderNotification{
+        position: absolute;
+        background: rgba(255, 255, 255, 1);
+        width: 60%;
+        border-radius: 30px;
+        top: 30%;
+        left: 20%;
+    }
+}
+
+@media screen and (max-width: 1475px) {
+    app-product-card{
+        width: 29%;
+        margin: 2%;
+    }
+
+    #allProductsDiv {
+        max-height: 90%;
+        width: 100%;
+    }
+
+}
+
+
+@media screen and (max-width: 1050px) {
+    #appCustomer {
+        height: 94vh;
+        margin-top: 13.5vh
+    }
+
+    #firstOrderNotification{
+        position: absolute;
+        background: rgba(255, 255, 255, 1);
+        width: 80%;
+        border-radius: 30px;
+        top: 30%;
+        left: 10%;
+    }
+}
+  
+
+
+@media screen and (max-width: 700px) {
+    #firstOrderNotification{
+        position: absolute;
+        background: rgba(255, 255, 255, 1);
+        width: 96%;
+        border-radius: 30px;
+        top: 30%;
+        left: 2%;
+    }
+    
+    #searchInput{
+        width: 35% !important; 
+    }
+}
+    
+    
+@media screen and (max-width: 500px) {
+
+    #appCustomer > #searchInput{
+        display: block;
+        width: 80vw;
+        margin: auto auto 2% auto;
+    }
+
+    #searchInput{
+        width: 85% !important; 
+    }
+    #appCustomer {
+        min-height: 74vh;
+        height: auto;
+    }
+
+}
+    
+@media screen and (min-width: 400px) and (max-height: 800px)  {
+}
+    
+@media screen and (min-width: 1050px) and (max-height: 800px) {
+    #appCustomer {
+        margin-top: 1.5vh
+    }
+}
+
+  
+@media screen and (max-width: 400px) {
+}  
+  
+ 
+  

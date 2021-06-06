@@ -1,0 +1,44 @@
+<div id="headerContainer">
+
+    <div id="cartButton" class="buttonsDivs"
+        *ngIf="userService.userType != 'ADMIN' && router.url != '/login' && router.url != '/register' && router.url != '/advanced-register'">
+        <app-cart></app-cart>
+    </div>
+
+    <div id="adminButton" class="buttonsDivs"
+        *ngIf="userService.userType == 'ADMIN' && router.url != '/login' && router.url != '/register' && router.url != '/advanced-register'">
+        <button (click)="openNewModelProduct()">Add Product</button>
+    </div>
+
+    <div id="header">
+        <div id="leftHeaderDiv">
+            <img src="/assets/logo.png">
+        </div>
+
+        <div>
+            <h1 class="helloHeader" *ngIf="userService.firstName == undefined">
+                Hello Guest
+            </h1>
+            <h1 class="helloHeader" *ngIf="userService.firstName != undefined">
+                Hello {{userService.firstName+""}}
+            </h1>
+        </div>
+
+        <div id="aboutContainer">
+            <div id="picturesContainer">
+                <a href="tel: +972525109880"><img src="/assets/phone.png"></a>
+                <a
+                    href="mailto:adarabadian@gmail.com?subject = Contact about AdarMarket&body = I really liked your site"><img
+                        src="/assets/email.png"></a>
+                <a href="https://discordapp.com/users/253959767389765632"><img src="/assets/discord.png"></a>
+            </div>
+
+            <h3>Contact Us</h3>
+        </div>
+    </div>
+
+    <div class="buttonsDivs"
+        *ngIf="router.url != '/login' && router.url != '/register' && router.url != '/advanced-register'">
+        <button id="logOutButton" (click)="logOut()">Logout</button>
+    </div>
+</div>
