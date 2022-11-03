@@ -1,0 +1,302 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Alegreya&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Domine&display=swap');
+
+#headerContainer{
+    display: flex;
+}
+
+#header{
+    font-family: 'Alegreya', serif;
+    display: inline-flex;
+    width:80%;
+    height: -webkit-fill-available;
+    background-color: rgb(255, 255, 255, 0.85);
+    padding: 0;
+    border-radius: 0  0 10px 10px;
+    margin: 0 10% 0 10%;
+}
+
+#header > div > h1{
+    font-family: 'Domine', serif;
+    font-size: xx-large;
+    margin-top: 7%;
+    letter-spacing: 2px;
+    margin-bottom: 0%;
+}
+
+#header > div{
+    min-width: 33%;
+    max-height: 8vh;
+}
+
+#header > div > img{
+    max-height: 7vh !important;
+}
+
+#header > div > p {
+    height: -webkit-fill-available;
+} 
+
+div > a > img{
+    max-height: 4.5vh;
+    margin-top: 5%;
+    margin-left: -16.9%;
+}
+#leftHeaderDiv{
+    text-align: left;
+}
+#aboutContainer{
+    display: grid;
+    justify-content: flex-end;
+}
+
+#picturesContainer{
+    height: 100%;
+    margin: auto;
+    margin-top: 0;
+    display: inline-flex;
+}
+#picturesContainer >a{
+    height: 100%;
+    margin-right: 2%;
+    margin-top: 2%;
+}
+#aboutContainer >h3{
+    margin: -8px 0px 0px -1px;
+    letter-spacing: 5px;
+    font-family: 'Domine', serif;
+    font-weight: bolder;
+}
+    
+#logOutDiv{
+    height: 7vh;
+    background: white;
+}
+
+.buttonsDivs{    
+    height: 7vh;
+    width: 30%;
+    background: rgb(255, 255, 255, 0.5);
+    border-radius: 0 0 15px 15px;
+}
+
+
+
+button, app-cart{
+    margin-top: 1vh;
+    height: 5vh;
+    width: 94%;
+    background-color: rgb(255, 255, 255, 0.5);
+    border-radius: 10px;
+    font-family: 'Parisienne';
+    font-size: x-large;
+    padding-top: 0;
+    letter-spacing: 4px;
+    font-weight: bold;
+}
+
+app-cart{
+    display: block;
+    max-width: 94%;
+    margin: auto;
+    margin-top: 1vh;
+    background-color: rgb(255, 255, 255, 0.5);
+    border-radius: 10px;
+    font-family: 'Parisienne';
+    font-size: x-large;
+    padding-top: 0;
+    letter-spacing: 4px;
+    font-weight: bold;
+    border-width: 2px;
+    border-style: outset;
+    border-color: black, white;
+    border-image: initial;
+    height: 67%;
+    border-style: inset;
+    border: rgb(68 68 68) 2px solid;
+}
+
+button:focus {
+    outline-width: 0;
+}
+
+button > img{
+    height: -webkit-fill-available;
+}
+
+button > a{
+    vertical-align: baseline;
+}
+#logOutButton{
+    border-style: inset;
+    border: rgb(68 68 68) 2px solid;
+}
+
+
+#logOutButton{
+    line-height: 4.7vh;
+}
+
+div > button > a{
+    vertical-align: 60%;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+
+
+@media screen and (max-width: 1475px) {
+    .buttonsDivs {
+        width: 60%;
+    }
+    #header{
+        width: 150%;
+        margin: 0 2%
+    }
+
+ }
+
+ 
+@media screen and (max-width: 1050px) {
+    #headerContainer{
+        display: block;
+    }
+
+    .buttonsDivs, #header{
+        width: 100%;
+        margin: 0;
+        border-radius: 0;
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+
+    button{
+        margin: 0;
+    }
+
+
+    #logOutButton{
+        line-height: 4vh;
+    }
+    
+
+    #header > #leftHeaderDiv > img {
+        height: 7vh;
+    }
+    
+    #header > div > .helloHeader {
+        margin-top: 4%;
+    }
+    .buttonsDivs {
+        height: 6vh;
+    }
+
+    #adminButton, #cartButton{
+        padding-top: 1%;
+    }
+    div > button > a{
+        vertical-align: 105%;
+        font-size: 80%;
+    }
+
+    #picturesContainer >a{
+        height: 100%;
+        margin-right: 2%;
+        margin-top: -2%;
+    }
+    
+ }
+
+@media screen and (max-width: 750px) {
+    div > button > a{
+        vertical-align: 85%;
+        font-size: 80%;
+    }
+      
+}  
+
+
+ @media screen and (max-width: 500px) {
+    #aboutContainer > h3{
+        letter-spacing: 3px;
+    }
+    
+    #logOutButton > img{
+        margin-bottom: 0%;
+        height: 30px;    
+        vertical-align: 34%;    
+    }
+
+    div > button > a{
+        vertical-align: 15%;
+        font-size: 80%;
+    }
+
+    #logOutButton > a{
+        vertical-align: 80%;
+        font-size: 80%;
+    } 
+
+    #picturesContainer > a > img{
+        max-height: 4.5vh;
+        margin-top: 5%;
+        margin-left: 5.1%;
+    }
+
+    .helloHeader{
+        display: none !important;
+    }
+    #picturesContainer{
+        margin-right: 10px;
+        margin-top: 3px;
+    }
+    #picturesContainer > a{
+        margin-right: 1%;
+    }
+}  
+  
+@media screen and (min-width: 450px) and (max-height: 800px)  and (max-width: 1050px) {
+    #logOutButton > img{
+        height: 30px;
+        margin-bottom: 0;
+    } 
+    #logOutButton > a{
+        vertical-align: 25%;
+    } 
+    app-cart{
+        margin-top: 0;
+    }
+}
+@media screen and (max-height: 826px) {
+    #aboutContainer > h3{
+        letter-spacing: 4px;
+        margin-top: -12px;
+    }
+}
+
+@media screen and (max-height: 600px) {
+    #aboutContainer > h3{
+        letter-spacing: 3px;
+        margin-top: -12px;
+    }
+    #logOutButton > img{
+        height: 23px;
+        vertical-align: 47%;
+        margin-bottom: 0;
+    } 
+    #logOutButton > a{
+        vertical-align: 82%;
+    } 
+}
+
+@media screen and (max-width: 400px) {
+    #aboutContainer > h3{
+        letter-spacing: 2px;
+        margin-top: -12px;
+    } 
+}

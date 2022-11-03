@@ -1,0 +1,53 @@
+<div id="adminModal">
+    <form #adminForm="ngForm" (submit)="saveProduct()" [formGroup]="adminProductForm" ngNativeValidate>
+        <h2><i>Product Name</i></h2>
+        <input placeholder="Product Name" class="productDetailsInput" [formControl]="productName" id="productNameInput"
+            name="productName"><br>
+        <span
+            *ngIf="productName.errors?.minlength || productName.errors?.maxlength || productName.value.length < 1">Product
+            name must be between 3 - 20 letters</span><br>
+        <br>
+
+        <h2><i>Product Category</i></h2>
+        <select [formControl]="productCategory" class="productDetailsInput" name="productCategory"><br>
+            <option *ngFor="let category of categories" [value]="category.ID">{{category.Name}}</option>
+        </select><br>
+        <span *ngIf="productCategory.value == ''">Product category is required!</span><br><br>
+
+
+        <h2><i>Product Picture</i></h2>
+        <div id="picturesContainer">
+            <div id="leftImage">
+                Current Image: <br>
+                <img src="{{product.picture}}">
+            </div>
+            <div>
+                Upload A new image:
+                <input type="file" (change)="onPictureAdd($event)" name="productPicture"><br>
+                <img *ngIf="imagePreviewUrl != ''" src="{{imagePreviewUrl}}">
+                <span *ngIf="imagePreviewUrl == '' && product.id == 0">You must include product picture!</span>
+            </div>
+        </div>
+        <br><br>
+
+
+        <h2><i>Product Price in NIS (₪) </i></h2>
+        <input class="productDetailsInput" placeholder="Product price" type="number" pattern="^\d*(\.\d{0,2})?$"
+            step="0.01" [formControl]="productPrice" name="productPrice"><br>
+        <span *ngIf="productPrice.errors?.min">Product price must be at least 0.10₪!</span>
+        <span *ngIf="productPrice.errors?.pattern">Product price can have maximum 2 decimal digits!</span>
+        <span *ngIf="productPrice.errors?.required">Product price is a must field!</span>
+        <br><br>
+
+        <div id="buttonsContainer">
+            <button type="submit" [disabled]="adminForm.form.invalid || productPicture =='' && product.id == 0
+             || productCategory.pristine && product.id == 0 ">
+                Save Product
+            </button>
+
+            <button type="button" (click)="closeModal()">
+                Close Window
+            </button>
+        </div>
+    </form>
+</div>

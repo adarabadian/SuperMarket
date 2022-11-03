@@ -1,0 +1,19 @@
+<mat-accordion>
+  <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+    <mat-expansion-panel-header>
+      <mat-panel-title *ngIf="filter == ''">
+        <a>All Products</a>
+      </mat-panel-title>
+      <mat-panel-title *ngIf="filter != ''">
+        <a>{{filter}}</a>
+      </mat-panel-title>
+
+    </mat-expansion-panel-header>
+    <a class="filterOptions" (click)="changeProductPipe('')">All Products</a><br>
+    <a class="filterOptions" (click)="changeProductPipe('Fruits And Vegetables')">Fruits &Vegetables</a><br>
+    <a class="filterOptions" (click)="changeProductPipe('Drinks')">Drinks</a><br>
+    <a class="filterOptions" (click)="changeProductPipe('Diary')">Diary</a><br>
+    <a class="filterOptions" (click)="changeProductPipe('Dry Food')">Dry Food</a><br>
+    <a class="filterOptions" (click)="changeProductPipe('Meat And Fish')">Meat & Fish</a>
+  </mat-expansion-panel>
+</mat-accordion>

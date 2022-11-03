@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
+
+#adminAllProducts{
+    max-width: -webkit-fill-available;
+    height: 89%;
+}
+
+.parent > nav{
+    display: flex;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 40px;
+    width: 98%;
+    margin: auto;
+}
+
+.parent > nav > a{
+    display: inline-block;
+    width: 20%;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    font-family: 'Parisienne', cursive;
+    font-size: xx-large;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#adminAllProducts > a{
+    display: inline-block;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    font-family: 'Parisienne', cursive;
+    font-size: 190%;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    letter-spacing: 2px;
+    word-spacing: 10px;
+}
+
+#adminAllProducts > input{
+    height: 4%;
+    width: 20%;
+    font-family: 'Arima Madurai', cursive;
+    font-size: 120%;
+    font-weight: bold;
+    padding: 0;
+    margin: 1%;
+    background-color: #ffffff66;
+    border-radius: 31px;
+    text-align: center;
+}
+
+
+
+@media screen and (max-width: 1050px) {
+    #searchInput{
+        width: 85% !important; 
+    }
+    #adminAllProducts{
+        margin-top: 13.5vh
+    }
+}
+
+
+@media screen and (max-width: 400px) {
+}
+
+@media screen and (min-width: 400px) and (max-height: 800px) and (min-height: 600px)  {
+    #adminAllProducts {
+        margin-top: 15.5vh
+    }
+}
+
+@media screen and (min-width: 400px) and (max-height: 600px)  {
+    #adminAllProducts {
+        margin-top: 18.5vh
+    }
+}

@@ -1,0 +1,69 @@
+<div>
+  <div id="cartButton" [class.disabled-content]="this.router.url != '/customer'" (click)="toggleCart()">
+    {{cartBtnText}}
+  </div>
+
+  <div id="cartList" [hidden]=isCollapsed>
+    <table>
+      <thead>
+        <th class="pictureTh">Picture</th>
+        <th>Name</th>
+        <th>Amount</th>
+        <th>Price</th>
+        <th class="totalTh">Total</th>
+        <th>Delete</th>
+      </thead>
+
+      <tbody class="productsTableBody">
+        <tr class="card-body" *ngFor="let item of cartService.userCart | keyvalue">
+          <td class="pictureTd">
+            <img src={{item.value.picture}}>
+          </td>
+          <td>
+            {{item.value.name}}
+          </td>
+          <td>
+            <input type="number" min="1" max="99" (blur)="updateItemAmount($event, item.key)"
+              oninput="validity.valid||(value='');" [(ngModel)]="item.value.amount">
+          </td>
+          <td>
+            {{item.value.price}}₪
+          </td>
+          <td class="totalPrice">
+            {{(item.value.amount*item.value.price).toFixed(2)}}₪
+          </td>
+          <td>
+            <button class="deleteButton" (click)="deleteProduct(item.key)">Delete product</button>
+          </td>
+        </tr>
+      </tbody>
+
+      <!-- if user cart empty -->
+      <div id="cartMessage" *ngIf="(cartService.userCart.size < 1)">
+        Your cart is empty! Please add more items to continue.
+      </div>
+
+    </table>
+    <table>
+      <tbody>
+
+        <tr id="totalPriceContainer">
+          <td>
+            Total cart price: {{calculateCart()}}₪
+          </td>
+        </tr>
+
+        <tr id="buttonsContainer">
+          <td class="buttonsDiv">
+            <button (click)="checkout()"><a>Checkout</a><img src="/assets/checkoutIcon.png"></button>
+          </td>
+          <td class="buttonsDiv">
+            <button (click)="emptyUserCart()"><a>Empty Cart</a><img src="/assets/garbageIcon.png"></button>
+          </td>
+        </tr>
+      </tbody>
+
+    </table>
+
+  </div>
+</div>

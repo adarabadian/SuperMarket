@@ -1,0 +1,106 @@
+#allProductsDiv{
+    max-width: -webkit-fill-available;
+    max-height: 101%;
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: auto;
+}
+#allProductsDiv::-webkit-scrollbar-track
+{
+	border-radius: 10px;
+	background-color: #F5F5F5;
+}
+
+#allProductsDiv::-webkit-scrollbar
+{
+	width: 12px;
+	background-color: #F5F5F5;
+	border-radius: 10px;
+}
+
+#allProductsDiv::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	background-color: #0000003b;
+}
+
+app-product-card{
+    margin: 1%;
+    width: 23%;
+    height:480px;
+}
+
+.categoryHeader{    
+    width: 100%;
+    margin-top: 1.5%;
+    font-family: 'Parisienne', cursive;
+    font-size: 300%;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.cardsContainer{
+    width: 100%;
+    max-height: 94%;
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: auto;
+}
+
+
+
+
+@media only screen and (max-width: 1475px) {
+    app-product-card{
+        width: 29%;
+        margin: 2%;
+    }
+
+    #allProductsDiv {
+        max-height: 89%;
+        width: 100%;
+    }
+
+}
+
+
+@media only screen and (max-width: 1050px) {
+    app-product-card{
+        width: 29%;
+        margin: 0 2%;
+    }
+    .cardsContainer{
+        margin-bottom: 8vh;
+    }
+}
+
+@media only screen and (max-width: 760px) {
+    app-product-card{
+        width: 46%;
+        margin: 0 2%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    app-product-card{
+        height:400px;
+        width: 100%;
+        margin: 0;
+    }    .cardsContainer{
+        margin-bottom: 0vh;
+    }
+}
+
+@media screen and (min-width: 800px) and (max-height: 800px) {
+    #allProductsDiv{
+        max-height: 102%;
+    }
+}
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}

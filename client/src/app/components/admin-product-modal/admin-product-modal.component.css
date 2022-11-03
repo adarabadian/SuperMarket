@@ -1,0 +1,140 @@
+form{
+    margin: auto;
+    text-align: center;
+    width: 45vw;
+}
+
+img{
+    width: 90%;
+    height: 30vh;
+}
+
+#picturesContainer{
+    display: flex;
+}
+
+i{
+    letter-spacing: 3px;
+    font-size: 120%;
+    margin: 0;
+}
+
+#picturesContainer > div{
+    width: 50%;
+}
+
+h2{
+    margin: 0;
+}
+
+.productDetailsInput{
+    width: 40%;
+    font-size: 160%;
+    margin-top: 0;
+    padding: 0 1%;
+    border-radius: 40px;
+    border: 2px inset gray;
+}
+
+input , select {
+    text-align: center;
+    background: white;
+}
+
+button{
+    width: 40%;
+    font-size: 160%;
+    margin-top: 0;
+    padding: 1% 1%;
+    border-radius: 40px;
+    border: 2px inset gray;
+    margin: 0 5%;
+}
+
+#buttonsContainer{
+    display: flex;
+    width: 100%;
+}
+
+#leftImage{
+    border-right: 1px black solid;
+}
+
+img{
+    object-fit: cover;
+}
+
+span {
+    color: red;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+@media  screen and (max-width: 1200px) {
+    #adminModal { 
+        
+        width: 100%;
+    }
+
+    form{
+        width: 90%;
+    }
+
+    form > input , select{
+        width: 50% !important;
+    }
+}
+
+@media  screen and (max-width: 900px) {
+    
+    cdk-overlay-pane { 
+        width: 100vw;
+    }
+
+    form > input , select{
+        width: 60% !important;
+    }
+}
+
+@media  screen and (max-width: 650px) {
+    #adminModal{
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    #picturesContainer{
+        display: block;
+        max-height: 35vh;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+    #picturesContainer > div{
+        display: block;
+        width: 100%;
+        overflow-x: hidden;
+    }
+    #picturesContainer > div > img{
+        max-height: 27vh;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #picturesContainer {
+        max-height: 33vh;
+    }
+    #picturesContainer > div > img{
+        max-height: 22vh;
+    }
+    #adminModal{
+        height: 99vh;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+

@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
+
+#registerHeader{
+    margin-bottom: 3%;
+    font-family: 'Parisienne', cursive;
+    letter-spacing:3px;
+    font-size: 350%;
+}
+
+div{
+    margin: 0% auto;
+    width:80%;
+    padding: 2%;
+    border-radius: 20px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+#registerContainer > div > form {
+    margin-top: 2%;
+    width: 80%;
+    margin: auto;
+}
+
+#registerContainer > div > form > input{
+    text-align: center;
+    width: 50%;
+    border-radius: 14px;
+    height: 24px;
+    font-size: 120%;
+    margin-top: 1%;
+    outline: none;
+} 
+
+#registerContainer > div > form > span{
+    color: red;
+} 
+
+
+#registerContainer > div > form > button{
+    width: 40%;
+    height: 5%;
+    display: block;
+    margin: 1% auto 3% auto;
+    border-radius: 50px;
+    font-family: 'Handlee', cursive;
+    font-weight: 600;
+    font-size: 130%;
+    letter-spacing: 2px;
+}
+
+a{
+    margin-top: 5%;
+    display: block;
+}
+
+#submitButton{
+    margin-top: 8% !important;
+}
+
+span{
+    display: block;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+
+@media screen and (max-width: 1500px) {
+    #formContainer{
+        width: 100%;
+    }
+}
+
+ 
+@media screen and (max-width: 950px) {
+    #registerContainer, #formContainer{
+        width: 100%;
+        margin: 0;
+        padding: 2% 0 !important;
+    }
+    form{
+        width: 100% !important;
+    }
+    h1{
+        margin-bottom: 3% !important;
+    }
+
+}
+
+  
+@media screen and (max-width: 700px) {
+    #formContainer > form { 
+        width: 100% !important;
+        padding: 2% 0;
+    }
+    h1{
+        margin-top: 5% !important;
+    }
+}
+
+
+
+
+
+@media screen and (max-width: 500px) {
+    input{
+        width: 80% !important;
+    }
+    
+    #formContainer >form > button {
+        width: 80% !important;
+    }
+
+    #loginContainer{
+        margin-top: -12.5vh;
+    }
+}
+
+    
+@media screen and (min-width: 1050px) and (max-height: 800px) {
+    #registerContainer, #formContainer{
+        margin: 2vh auto 0 auto;
+        padding: 0 0 0 0;
+        width: 100%;
+    }
+
+    #registerHeader {
+        padding-top: 2%;
+    }
+}
+
+
+    
+@media screen and (max-width: 1050px) {
+    #registerContainer, #formContainer{
+        margin: 2vh auto 0 auto;
+        padding: 0 0 0 0;
+        width: 100%;
+    }
+
+    
+    #registerContainer{
+        margin-top: -12.5vh;
+    }
+
+    #registerHeader {
+        padding-top: 2%;
+    }
+}
+
+
+
+@media screen and (max-width: 700px) {
+    
+    #loginContainer{
+        margin-top: -12.5vh;
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+    
+    #loginContainer{
+        margin-top: -12.5vh;
+        height: 100vh;
+    }
+    #registerHeader{
+        margin-top: 20% !important;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #registerHeader{
+        margin-top: 25% !important;
+    }
+}
+
+@media screen and (max-width: 335px) {
+    #registerHeader{
+        margin-top: 30% !important;
+    }
+}
+
+@media screen and (max-width: 287px) {
+    #registerHeader{
+        margin-top: 35% !important;
+    }
+}
