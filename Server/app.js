@@ -69,3 +69,7 @@ server.listen(port, () => console.log("listening on port " + port));
 
 server.use(cors({ origin: "https://adarmarket.onrender.com", credentials: false }));
 server.use(cors({ origin: "http://adarmarket.onrender.com", credentials: false }));
+server.use(cors({ origin: 'http://adar-projects-catalog.onrender.com', credentials: false }));
+server.use(cors({ origin: 'https://adar-projects-catalog.onrender.com', credentials: false }));
+server.use(cors({ origin: 'https://adar-projects-catalog.herokuapp.com', credentials: false }));
+server.use(cors({ origin: 'http://adar-projects-catalog.herokuapp.com', credentials: false }));
